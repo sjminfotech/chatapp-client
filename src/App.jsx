@@ -5,7 +5,10 @@ import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import EditProfile from "./pages/EditProfile";
 import ProfilePhotoUploader from "./pages/ProfilePhotoUploader";
-function App() {
+import Search from "./pages/Search";
+import ViewProfile from "./pages/viewprofile";
+
+function App() {  
   return (
     <Routes>
       <Route path="/" element={<Navigate to="/signup" />} />
@@ -15,6 +18,12 @@ function App() {
           <Route path="/profile" element={<Profile />} />
                 <Route path="/edit-profile" element={<EditProfile />} />
       <Route path="/profile-photo" element={<ProfilePhotoUploader />} />
+      <Route path="/search" element={<Search />} />     
+<Route path="/viewprofile/:id" element={<ViewProfile />} />
+
+<Route path="/viewprofile/:userId" element={<ViewProfile />} />
+
+
     </Routes>
   );
 }
